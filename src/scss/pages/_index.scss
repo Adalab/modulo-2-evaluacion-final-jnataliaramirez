@@ -1,0 +1,14 @@
+.search {
+
+    &__card { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: lightcyan;
+        width: rem(250);
+        margin: rem(15);
+        padding: rem(15); 
+    }
+
+
+}

@@ -1,4 +1,16 @@
+* {
+    font-family: $font-title;
+}
+
+// .title {
+//     font-family: $font-title;
+// }
+
 .series {
+    // display: flex;
+
+
+    
 
     &__card { 
         display: flex;
@@ -8,6 +20,15 @@
         width: rem(250);
         margin: rem(15);
         padding: rem(15); 
+        font-size: rem(20);
+
+        &--fav { 
+        background-color: lightpink;
+        
+        h3 {
+            font-family: $font-favourite ;
+        }
+        }
     }
 
 

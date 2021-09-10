@@ -9,13 +9,29 @@ const submit = document.querySelector('.js_button');
 let dataSeries = [];
 
 
-// *** Hacer petición al servidor - Fetch
-fetch (`http://api.tvmaze.com/search/shows?q=game`) 
+// *** Recoger input de la usuaria y hacer petición al servidor 
+
+// * Funcion manejadora 
+function handlerSearch(event) {
+
+    seriesSection.innerHTML = '';
+
+    let valueInput =  searchInput.value;
+
+    // *** Hacer petición al servidor - Fetch
+    fetch (`http://api.tvmaze.com/search/shows?q=${valueInput}`) 
     .then((response) => response.json())
     .then((data) => {
         dataSeries = data;
         renderSearch();
     });
+
+    event.preventDefault();
+}
+
+// * Listener
+submit.addEventListener('click', handlerSearch);
+
 
 // *** Mostrar en pantalla la busqueda de las series
 function renderSearch() {
@@ -26,6 +42,7 @@ function renderSearch() {
         // * Variable que muestra el objeto de la info de la serie 
         let dataShow = dataSerie.show
         let dataImage = dataShow.image;
+        let dataId = dataShow.id;
 
         // * Crear elementos html a js
         const newArticleItemEl = document.createElement('article');
@@ -34,10 +51,14 @@ function renderSearch() {
 
         // * Configuracion de los elementos
         newArticleItemEl.classList.add('series__card');
+        newArticleItemEl.classList.add('js_series_card');
         newImgItemEl.classList.add('js_img_serie');
         newImgItemEl.classList.add('series__img');
         newh3ItemEl.classList.add('js_name_serie');
         newh3ItemEl.classList.add('series__title');
+
+        // * Configuración de la card
+        newArticleItemEl.id = `${dataId}`
 
         // * Configuración de la imagen
         const imageNull = 'https://via.placeholder.com/210x295/ffffff/666666/?text=TV';
@@ -59,9 +80,30 @@ function renderSearch() {
         // * Añadir <article> a <section> de la pág. HTML
         seriesSection.appendChild(newArticleItemEl);
     }
+
+    listenerFav();
+
 }
 
-// *** Recoger input de la usuaria
+// ! Aqui voy !!! 
+// *** Click de la usuaria sobre la card
+
+// * Funcion manejadora 
+
+function handlerFav(event) {
+    console.log(event.target);
+    console.log(event.currentTarget.id);
+}
+
+// * Funcion Listener 
+function listenerFav () {
+    // * Variable que trae todos los elementos (cards) encontrados 
+    const cardsList = document.querySelectorAll('.js_series_card');
+
+    // * Escucho el evento sobre cada elemento (card)
+    for (const favouriteEl of cardsList ) {
+        favouriteEl.addEventListener('click', handlerFav); 
+}}
 
 
 

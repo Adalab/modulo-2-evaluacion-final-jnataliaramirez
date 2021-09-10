@@ -1,23 +1,23 @@
 'use strict';
 
-// * Variables del mundo html a js 
-const searchSection = document.querySelector('.js_series_section');
+// *** Variables del mundo html a js 
+const seriesSection = document.querySelector('.js_series_section');
 const searchInput = document.querySelector('.js_search_input');
 const submit = document.querySelector('.js_button');
 
-// * Variables globales
+// *** Variables globales
 let dataSeries = [];
 
 
-// * Hacer petición al servidor - Fetch
-fetch (`http://api.tvmaze.com/search/shows?q=girls`) 
+// *** Hacer petición al servidor - Fetch
+fetch (`http://api.tvmaze.com/search/shows?q=game`) 
     .then((response) => response.json())
     .then((data) => {
         dataSeries = data;
         renderSearch();
     });
 
-// * Mostrar en pantalla la busqueda de las series
+// *** Mostrar en pantalla la busqueda de las series
 function renderSearch() {
     
     // * Un for para cojer cada uno de los elementos del array como uno solo
@@ -25,10 +25,8 @@ function renderSearch() {
 
         // * Variable que muestra el objeto de la info de la serie 
         let dataShow = dataSerie.show
-        let dataImage = dataShow.image.medium;
+        let dataImage = dataShow.image;
 
-        console.log(dataImage)
-        
         // * Crear elementos html a js
         const newArticleItemEl = document.createElement('article');
         const newImgItemEl = document.createElement('img');
@@ -42,22 +40,29 @@ function renderSearch() {
         newh3ItemEl.classList.add('series__title');
 
         // * Configuración de la imagen
-        // newImgItemEl.src = `${}`
-
-        // * Añadir contenido: Titulo
+        const imageNull = 'https://via.placeholder.com/210x295/ffffff/666666/?text=TV';
         if (dataImage === null) {
-            
-            let newContentTitle = document.createTextNode(`${dataImage}`);
+            newImgItemEl.src = `${imageNull}`;
+        } else {
+            let dataImgContent = dataImage.medium;
+            newImgItemEl.src = `${dataImgContent}`;
         }
 
-        // ! Continuar con la funcion de rellenar una imagen fija cuando no tenga info de imagen de serie
+        // * Añadir contenido: Titulo de la serie
+        let newContentTitle = document.createTextNode(`${dataShow.name}`);
+        newh3ItemEl.appendChild(newContentTitle);
+        
+        // * Añadir <img> y <h3> a <article>
+        newArticleItemEl.appendChild(newImgItemEl);
+        newArticleItemEl.appendChild(newh3ItemEl);
 
-
-
+        // * Añadir <article> a <section> de la pág. HTML
+        seriesSection.appendChild(newArticleItemEl);
     }
-
-
-
-
-
 }
+
+// *** Recoger input de la usuaria
+
+
+
+

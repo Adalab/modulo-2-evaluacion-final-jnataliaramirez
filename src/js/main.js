@@ -1,17 +1,18 @@
 'use strict';
 
-// *** Variables del mundo html a js 
+// *** Variables del mundo html a js
 const seriesSection = document.querySelector('.js_series_section');
 const searchInput = document.querySelector('.js_search_input');
 const submit = document.querySelector('.js_button');
 
 // *** Variables globales
-let dataSeries = [];
+// let dataSeries = [];
+const dataShows = [];
 
 
-// *** Recoger input de la usuaria y hacer petición al servidor 
+// *** Recoger input de la usuaria y hacer petición al servidor
 
-// * Funcion manejadora 
+// * Funcion manejadora
 function handlerSearch(event) {
 
     seriesSection.innerHTML = '';
@@ -19,10 +20,17 @@ function handlerSearch(event) {
     let valueInput =  searchInput.value;
 
     // *** Hacer petición al servidor - Fetch
-    fetch (`http://api.tvmaze.com/search/shows?q=${valueInput}`) 
+    fetch (`http://api.tvmaze.com/search/shows?q=${valueInput}`)
     .then((response) => response.json())
     .then((data) => {
-        dataSeries = data;
+
+        // * Tomar la info de data.show para añadir en un nuevo array dataShows**
+        for (const eachEl of data) {
+            let eachShow = eachEl.show;
+            dataShows.push(eachShow);
+        }
+
+        // dataSeries = data;
         renderSearch();
     });
 
@@ -35,12 +43,11 @@ submit.addEventListener('click', handlerSearch);
 
 // *** Mostrar en pantalla la busqueda de las series
 function renderSearch() {
-    
-    // * Un for para cojer cada uno de los elementos del array como uno solo
-    for (const dataSerie of dataSeries) {
 
-        // * Variable que muestra el objeto de la info de la serie 
-        let dataShow = dataSerie.show
+    // * Un for para cojer cada uno de los elementos del array como uno solo
+    for (const dataShow of dataShows) {
+
+        // * Variable que muestra el objeto de la info de la serie
         let dataImage = dataShow.image;
         let dataId = dataShow.id;
 
@@ -72,7 +79,7 @@ function renderSearch() {
         // * Añadir contenido: Titulo de la serie
         let newContentTitle = document.createTextNode(`${dataShow.name}`);
         newh3ItemEl.appendChild(newContentTitle);
-        
+
         // * Añadir <img> y <h3> a <article>
         newArticleItemEl.appendChild(newImgItemEl);
         newArticleItemEl.appendChild(newh3ItemEl);
@@ -85,24 +92,28 @@ function renderSearch() {
 
 }
 
-// ! Aqui voy !!! 
+// ! Aqui voy !!!
 // *** Click de la usuaria sobre la card
 
-// * Funcion manejadora 
+// * Funcion manejadora
 
 function handlerFav(event) {
-    console.log(event.target);
-    console.log(event.currentTarget.id);
+    // console.log(event.target);
+    // console.log(event.currentTarget.id);
+
+    // Otra forma de encontrar ID 
+    // const findId = dataSeries.find(dataSerie => dataSerie.show.id === parseInt(event.currentTarget.id))
+    // console.log(findId)
 }
 
-// * Funcion Listener 
+// * Funcion Listener
 function listenerFav () {
-    // * Variable que trae todos los elementos (cards) encontrados 
+    // * Variable que trae todos los elementos (cards) encontrados
     const cardsList = document.querySelectorAll('.js_series_card');
 
     // * Escucho el evento sobre cada elemento (card)
     for (const favouriteEl of cardsList ) {
-        favouriteEl.addEventListener('click', handlerFav); 
+        favouriteEl.addEventListener('click', handlerFav);
 }}
 
 

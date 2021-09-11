@@ -15,8 +15,6 @@ const dataShows = [];
 // * Funcion manejadora
 function handlerSearch(event) {
 
-    seriesSection.innerHTML = '';
-
     let valueInput =  searchInput.value;
 
     // *** Hacer petición al servidor - Fetch
@@ -43,6 +41,9 @@ submit.addEventListener('click', handlerSearch);
 
 // *** Mostrar en pantalla la busqueda de las series
 function renderSearch() {
+    seriesSection.innerHTML = '';
+
+
 
     // * Un for para cojer cada uno de los elementos del array como uno solo
     for (const dataShow of dataShows) {
@@ -92,18 +93,35 @@ function renderSearch() {
 
 }
 
-// ! Aqui voy !!!
+
 // *** Click de la usuaria sobre la card
 
+// * Variable global de favoritos 
+let dataFavourites = [];
+
 // * Funcion manejadora
-
 function handlerFav(event) {
-    // console.log(event.target);
-    // console.log(event.currentTarget.id);
+    // * Accede al id del elemento clickado
+    let clickCard = parseInt(event.currentTarget.id);
 
-    // Otra forma de encontrar ID 
-    // const findId = dataSeries.find(dataSerie => dataSerie.show.id === parseInt(event.currentTarget.id))
-    // console.log(findId)
+    // * Encontrar en el array dataShows la misma info al elemento que ha sido clickado
+    const findId = dataShows.find(dataShow =>
+        dataShow.id === clickCard);
+    
+    // ** Buscar que el fav seleccionado no este en el array de fav., para evitar duplicar contenido
+    // * Encontrar posición del elemento clickado: si es -1 no esta en el arrray dataFavourites
+    const favouriteFound = dataFavourites.findIndex(dataFavorite =>
+        clickCard === dataFavorite.id );
+    
+    // * Añadir el elemento clickado si no esta en el array
+    if (favouriteFound === -1) {
+        // * Añadir al array dataFavourites la info del elemento clickado  
+        dataFavourites.push(findId);
+    } else {
+        // * Quitar elemento si la usuaria vuelve a dar click sobre el (quitar fav.)
+        dataFavourites.splice(favouriteFound, 1);
+    }
+
 }
 
 // * Funcion Listener

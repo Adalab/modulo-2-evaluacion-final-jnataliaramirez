@@ -14,7 +14,7 @@ const dataShows = [];
 
 // * Funcion manejadora
 function handlerSearch(event) {
-
+    seriesSection.innerHTML = '';
     let valueInput =  searchInput.value;
 
     // *** Hacer petición al servidor - Fetch

@@ -1,0 +1,41 @@
+.series {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: rem(10);
+    
+
+    &__card { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $color-background-card;
+        padding: rem(15); 
+        font-size: rem(15);
+        
+        &--fav { 
+            background-color: $color-background-fav;
+            
+            h3 {
+            font-family: $font-favourite ;
+            font-size: rem(15);
+            font-weight: 700;
+            padding: rem(15) 0 0;
+
+
+        }
+        }
+    }
+
+    &__img {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    &__title {
+        text-align: center;
+        padding: rem(15) 0 0;
+    }
+
+
+}

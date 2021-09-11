@@ -15,42 +15,46 @@
   <body>
       <!--  Ej. <include src="./partials/header.html" title="Bienvenidos a  -->
 
-      <header>
-        <h1 class="title">Buscador de series</h1>
-      </header>
+      <header class="header">
+        <h1 class="header__title">Buscador de series</h1>
 
-      <main>
-        <form>
-          <input type="text" name="search" id="search" class="js_search_input" placeholder="Busca aquí tu serie">
-          <button type="submit" class="js_button">Busca</button>
+        <form class="header__form">
+            <input type="text" name="search" id="search" class="js_search_input header__form--input" placeholder="Busca aquí tu serie">
+            <label for="search" class="header__form--label"></label>
+            <button type="submit" class="js_button header__form--btn">Buscar</button>
         </form>
 
-        <!-- <section class="js_favourite favourite">
+      </header>
+
+      <main class="main">
+
+        <section class="js_favourite favourite">
           <!-- ! Aqui empieza a dibuja js -->
-          <!-- <h2 class="favourite__title">Mis series favoritas</h2>
-          <div>
+          <h2 class="favourite__title">Mis series favoritas</h2>
+          <div class="favourite__container">
             <ul>
-              <li>
-                <img src="./assets/images/img_prueba_GOT" alt="">
-                <h3>Game of Thrones</h3>
+              <li class="favourite__li" >
+                <h3 class="favourite__name">Game of Thrones</h3>
+                <img src="./assets/images/img_prueba_GOT.jpg" alt="" class="favourite__img">
+                <buttton class="favourite__close">x</buttton>
               </li>
             </ul>
-          </div> -->
+          </div>
           <!-- ! Aqui termina de dibuja js -->
-        <!-- </section> -->
+        </section>
 
         <section class="js_series_section series">
           <!-- ! Aqui empieza a dibuja js -->
 
-          <!-- <article class="js_series_card series__card ">
+          <article class="js_series_card series__card ">
             <img src="./assets/images/img_prueba_GOT.jpg" alt="" class="js_img_serie series__img">
             <h3 class="js_name_serie series__title">Titulo de la serie</h3>
           </article> 
 
           <article class="js_series_card series__card id="otro">
-            <img src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="" class="js_img_serie series__img">
-            <h3 class="js_name_serie series__title">Otro</h3>
-          </article> -->
+            <img src="./assets/images/img_prueba_DARK.jpg" alt="" class="js_img_serie series__img">
+            <h3 class="js_name_serie series__title">Dark</h3>
+          </article>
 
           <!-- ! Aqui termina de dibuja js -->
         </section>

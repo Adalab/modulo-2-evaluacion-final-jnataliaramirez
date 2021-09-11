@@ -42,8 +42,7 @@ submit.addEventListener('click', handlerSearch);
 // *** Mostrar en pantalla la busqueda de las series
 function renderSearch() {
     seriesSection.innerHTML = '';
-
-
+    let favClass = '';
 
     // * Un for para cojer cada uno de los elementos del array como uno solo
     for (const dataShow of dataShows) {
@@ -56,6 +55,18 @@ function renderSearch() {
         const newArticleItemEl = document.createElement('article');
         const newImgItemEl = document.createElement('img');
         const newh3ItemEl = document.createElement('h3');
+
+        // * Ejecuta isFavourite() para saber si el elemento esta en favoritos
+        // * true or false
+        const isNewArticleFav = isFavourite(dataShow);
+
+        // * Comprobar si hay elementos fav (true), para agregar la clase fav 
+        if (isNewArticleFav) {
+            favClass = 'series__card--fav';
+            newArticleItemEl.classList.add(`${favClass}`);
+        } else {
+            favClass = '';
+        }
 
         // * Configuracion de los elementos
         newArticleItemEl.classList.add('series__card');
@@ -93,7 +104,6 @@ function renderSearch() {
 
 }
 
-
 // *** Click de la usuaria sobre la card
 
 // * Variable global de favoritos 
@@ -122,6 +132,8 @@ function handlerFav(event) {
         dataFavourites.splice(favouriteFound, 1);
     }
 
+    renderSearch()
+
 }
 
 // * Funcion Listener
@@ -135,5 +147,18 @@ function listenerFav () {
 }}
 
 
-
+// *** Comprobar si elementos favoritos 
+function isFavourite(dataShow) {
+    // * Encontrar si en dataFavourites hay elementos de dataShow 
+    const favFound = dataFavourites.find(dataFav => 
+        dataFav.id === dataShow.id);
+        
+    // * Si no hay elementos devolvera undefined y la función será 
+    // * false y si tiene fav. devolvera true
+    if (favFound === undefined) {
+        return false;
+    } else {
+        return true;
+    }
+}
 

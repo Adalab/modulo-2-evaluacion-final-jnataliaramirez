@@ -6,15 +6,13 @@ const searchInput = document.querySelector('.js_search_input');
 const submit = document.querySelector('.js_button');
 
 // *** Variables globales
-// let dataSeries = [];
-const dataShows = [];
+let dataShows = [];
 
 
 // *** Recoger input de la usuaria y hacer petición al servidor
 
 // * Funcion manejadora
 function handlerSearch(event) {
-    seriesSection.innerHTML = '';
     let valueInput =  searchInput.value;
 
     // *** Hacer petición al servidor - Fetch
@@ -22,14 +20,17 @@ function handlerSearch(event) {
     .then((response) => response.json())
     .then((data) => {
 
+        // * Este arreglo esta vacio para cuando se vuelva hacer un fetch la ventana se vacie
+        dataShows = [];
+
         // * Tomar la info de data.show para añadir en un nuevo array dataShows**
         for (const eachEl of data) {
             let eachShow = eachEl.show;
             dataShows.push(eachShow);
         }
 
-        // dataSeries = data;
         renderSearch();
+
     });
 
     event.preventDefault();
@@ -101,7 +102,6 @@ function renderSearch() {
     }
 
     listenerFav();
-
 }
 
 // *** Click de la usuaria sobre la card
@@ -147,7 +147,7 @@ function listenerFav () {
 }}
 
 
-// *** Comprobar si elementos favoritos 
+// *** Comprobar si hay elementos favoritos 
 function isFavourite(dataShow) {
     // * Encontrar si en dataFavourites hay elementos de dataShow 
     const favFound = dataFavourites.find(dataFav => 
@@ -159,6 +159,18 @@ function isFavourite(dataShow) {
         return false;
     } else {
         return true;
+    }
+}
+
+
+// *** Mostrar en pantalla los favoritos, en su sección 
+function renderFav() {
+    
+    for (const dataFavorite of dataFavourites) {
+        
+        // * Variable que muestra el objeto de la info de la serie
+        let dataImage = dataShow.image;
+        let dataId = dataShow.id;
     }
 }
 

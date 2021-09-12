@@ -1,6 +1,7 @@
 .series {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: rem(10);
     
 
@@ -20,6 +21,8 @@
             font-size: rem(15);
             font-weight: 700;
             padding: rem(15) 0 0;
+            font-size: rem(18);
+
 
 
         }

@@ -1,23 +1,23 @@
 .btn {
-    font-family: inherit;
-    font-weight: 700;
-    color: $color-principal-alt;
-    background: transparent;
-    border-bottom: rem(2) solid $color-principal-alt;
-    border-radius: 6px; 
-    color:  $color-principal-alt;
-    padding: rem(7) rem(20);
-    text-align: center;
-    display: inline-block;
-    font-size: rem(18);
-    margin: rem(2);
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-    cursor: pointer;
-    text-decoration: none;
+    font-family                : inherit;
+    font-weight                : 700;
+    color                      : $color-principal-alt;
+    background                 : transparent;
+    border-bottom              : rem(2) solid $color-principal-alt;
+    border-radius              : 6px;
+    color                      : $color-principal-alt;
+    padding                    : rem(7) rem(20);
+    text-align                 : center;
+    display                    : inline-block;
+    font-size                  : rem(18);
+    margin                     : rem(2);
+    -webkit-transition-duration: 0.4s;
+    transition-duration        : 0.4s;
+    cursor                     : pointer;
+    text-decoration            : none;
 
     &:hover {
         background-color: $color-principal-alt;
-        color: white;
+        color           : white;
     }
 }

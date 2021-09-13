@@ -2,81 +2,81 @@
     text-align: center;
 
     &__title {
-        text-align: center;
-        font-family: $font-title;
-        font-size: rem(20);
-        font-weight: 600;
-        color: $color-principal;
+        text-align    : center;
+        font-family   : $font-title;
+        font-size     : rem(20);
+        font-weight   : 600;
+        color         : $color-principal;
         letter-spacing: rem(2);
     }
 
     &__button {
-        margin-top: rem(20);
-        font-size: rem(13);
-        width: rem(55);
-        padding: rem(3);
+        margin-top    : rem(20);
+        font-size     : rem(13);
+        width         : rem(55);
+        padding       : rem(3);
         letter-spacing: rem(1);
 
     }
 
     &__container {
-        display: flex;
+        display        : flex;
         justify-content: center;
-        margin-top: rem(15);
+        margin-top     : rem(15);
     }
 
     &__ul {
-        display: grid;
+        display              : grid;
         grid-template-columns: repeat(2, rem(150));
-        margin : 0;
-        gap: 0;
+        margin               : 0;
+        gap                  : 0;
     }
-    
+
 
     &__li {
-        display: flex;
-        flex-direction: column;
+        display        : flex;
+        flex-direction : column;
         justify-content: center;
-        align-content: center;
-        margin: auto;
-        width: 60%;
-        margin-bottom: rem(15);
-        border: rem(4) solid $color-background-fav;
-        padding: rem(5) rem(2);
+        align-content  : center;
+        margin         : auto;
+        width          : 60%;
+        margin-bottom  : rem(15);
+        border         : rem(4) solid $color-background-fav;
+        padding        : rem(5) rem(2);
     }
 
     &__name {
-        text-align: center;
-        color: $color-principal-alt;
-        font-weight: 500;
+        text-align   : center;
+        color        : $color-principal-alt;
+        font-weight  : 500;
         margin-bottom: rem(10);
-        font-size: 0.3em;
+        font-size    : 0.3em;
     }
 
     &__img {
-        width: 65%;
-        margin: 0 auto;
+        width        : 65%;
+        margin       : 0 auto;
         margin-bottom: rem(10);
     }
 
     &__close {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        background-color: $color-principal-alt;
-        font-size: rem(8);
-        width: rem(15);
-        height: rem(15);
-        border-radius: 50%;
-        margin: 0 auto;
+        display            : flex;
+        justify-content    : center;
+        text-align         : center;
+        color              : white;
+        background-color   : $color-principal-alt;
+        font-size          : rem(8);
+        width              : rem(15);
+        height             : rem(15);
+        border-radius      : 50%;
+        margin             : 0 auto;
         transition-duration: 0.4s;
-        cursor: pointer;
+        cursor             : pointer;
 
         &:hover {
             background-color: white;
-            color: $color-principal-alt;
-            box-shadow: 0px 0px 5px 1px $color-principal-alt;
+            color           : $color-principal-alt;
+            box-shadow      : 0px 0px 5px 1px $color-principal-alt;
         }
     }
 }

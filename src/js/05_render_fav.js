@@ -1,8 +1,8 @@
 // *** Mostrar en pantalla los favoritos, en su sección 
 function renderFav() {
-    
+
     for (const dataFavourite of dataFavourites) {
-        
+
         // * Variable que muestra el objeto de la info de la serie
         let dataImage = dataFavourite.image;
         let dataId = dataFavourite.id;

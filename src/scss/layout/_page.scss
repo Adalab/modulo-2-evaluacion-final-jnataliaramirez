@@ -1,12 +1,12 @@
 body {
-    font-family: $font-text;
-    margin   : 0 auto;
-    max-width: rem(1000);
-    margin-top: rem(35);
+    font-family     : $font-text;
+    margin          : 0 auto;
+    max-width       : rem(1000);
+    margin-top      : rem(35);
     background-color: $color-background;
 }
 
 .main {
-    display: grid;
+    display              : grid;
     grid-template-columns: 30% 70%;
 }

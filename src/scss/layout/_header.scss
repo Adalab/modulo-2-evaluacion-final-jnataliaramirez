@@ -1,29 +1,29 @@
 .header {
     &__title {
-        font-family: $font-title;
-        text-align: center;
-        color: $color-principal;
-        font-size: rem(40);
-        font-weight: 700;
+        font-family   : $font-title;
+        text-align    : center;
+        color         : $color-principal;
+        font-size     : rem(40);
+        font-weight   : 700;
         letter-spacing: 0.2ch;
     }
 
     &__form {
-        margin: rem(40);
+        margin    : rem(40);
         text-align: center;
 
         &--input {
-            font-family: inherit;
-            width: 35%;
-            border: 0;
+            font-family  : inherit;
+            width        : 35%;
+            border       : 0;
             border-bottom: 2px solid $color-principal-alt;
-            outline: 0;
-            font-size: rem(18);
-            color: $color-principal;
-            padding: rem(5) rem(2);
-            background: transparent;
-            transition: border-color 0.2s;
-            margin: rem(14);
+            outline      : 0;
+            font-size    : rem(18);
+            color        : $color-principal;
+            padding      : rem(5) rem(2);
+            background   : transparent;
+            transition   : border-color 0.2s;
+            margin       : rem(14);
         }
 
     }

@@ -3,18 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>---*---</title>
+    <title>Buscador de Series</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Lobster&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
 
   <body>
-      <!--  Ej. <include src="./partials/header.html" title="Bienvenidos a  -->
+    <header>
+
+      <h1 class="header__title">Buscador de series</h1>
+
+      <form class="header__form">
+          <input type="text" name="search" id="search" class="js_search_input header__form--input" placeholder="Busca aquí tu serie">
+          <label for="search" class="header__form--label"></label>
+          <button type="submit" class="js_button btn header__form--btn">Buscar</button>
+      </form>
+
+    </header>
+    
+    <main class="main">
+
+      <section class="favourite">
+        <h2 class="favourite__title">Mis series favoritas</h2>
+        <button type="submit" class="js_reset btn favourite__button">Reset</button>
+        <div class="favourite__container">
+          <ul class="js_favourite_section favourite__ul">
+            
+          </ul>
+        </div>
+      </section>
+
+      <section class="js_series_section series">
+
+      </section>
+
+    </main>
 
 
+    <script src="./assets/js/main.js"></script>
+  </body>
 
-
-
-  <body>
 </html>

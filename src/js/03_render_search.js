@@ -1,4 +1,3 @@
-
 // *** Mostrar en pantalla la busqueda de las series
 function renderSearch() {
     seriesSection.innerHTML = '';

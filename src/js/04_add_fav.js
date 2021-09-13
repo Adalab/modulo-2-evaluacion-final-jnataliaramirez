@@ -1,4 +1,3 @@
-
 // *** Click de la usuaria sobre la card para añadir fav
 
 // * Funcion manejadora
@@ -64,5 +63,4 @@ function isFavourite(dataShow) {
     } else {
         return true;
     }
-
 }

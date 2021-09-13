@@ -12,4 +12,4 @@ function handlerReset() {
 }
 
 // * listener
-reset.addEventListener('click', handlerReset)
+reset.addEventListener('click', handlerReset);

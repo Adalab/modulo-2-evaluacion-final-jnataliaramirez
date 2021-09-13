@@ -1,39 +1,68 @@
 ![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
 
-# Adalab web starter kit
+# Evaluación final - Modulo 2 (JavaScript)
 
-Ahoy! Este es nuestro Starter Kit creado en **node y gulp**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
+Está es mi evaluación final, del módulo 2 (JavaScript) en *Adalab*.
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+Consiste en programar una **página web desde cero**, donde su función principal es prácticar todo lo visto en el módulo de Javascript, en esta ocasión se encuentra el foco del proyecto en hacer una aplicación web, donde la usuaria pueda interactuar con ella, donde haga peticiones, se muestre nueva información, guarde favoritos y si ya no son de su gusto los pueda borrar, ademas pueda guardar sus favoritos en su navegador 💚. 
 
-En el Kit hay 3 tipos de ficheros y carpetas:
+En la evaluación hay 3 tipos de ficheros y carpetas:
 
 - Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos.
-- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
-- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
+- La carpeta `src/`: son los ficheros de la aplicación web, como HTML, JS y SCSS, en esta carpeta se codeo todos los nuevos ficheros.
+- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. Para arrancar el proyecto, 🧠 recuerda  en consola poner `npm install` y luego para correrlo en tu pc `npm start`. El Kit lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
 
-## Guía de inicio rápido
+Es posible la solución de este ejercicio aplicando todo lo visto en el segundo módulo del bootcamp, pasando por temas como:  
+
+- Condicionales
+- Funciones
+- Eventos
+- Estructura de datos
+- Promesas
+- Tener un plan 
+- localStorage
+- Ademas ... de aplicar todo lo visto en el modulo 1 - maquetación.
+## ¿Qué encontrarás? 📖
+
+Esta página contiene 3 secciones principales: 
+
+1. JavaScript: 
+    - Buscar series.
+    - Añadir a tus series favoritas.
+    - Tener un registro de tus series favoritas.
+    - Resetear si ya no te gustan estas series.
+    - Volver a empezar. 
+    - Todo esto utilizando toda la tematica de JavaScript
+1. Maquetación Web: 
+    - Una página web en donde tiene un header y un cuerpo, con todo lo necesario para utilizar la app. 
+1. Estilos CSS:
+    - Unos estilos muy bonitos para que la usuaria se sienta a gusto, ademas la pág. esta en grid para que al ir añadiendo la información sea interactiva.
+
+#### Donde se puede ver 👀
+Esta página web tiene un enlace en la web, donde se podra visitar las veces que quiera.
+
+**El enlace es el siguiente: [Evaluación Final - Módulo Dos](URL "http://beta.adalab.es/modulo-2-evaluacion-final-jnataliaramirez/")**
+
+
+##### Instalación de Gulp para entrar al código 
+
+###### Guía de inicio rápido
 
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
+*Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:*
 
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos**.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
+1. **Clona esta repositorio desde GitHub**.
+1. **Abre una terminal** en la carpeta raíz del repositorio.
 1. **Instala las dependencias** locales ejecutando en la terminal el comando:
 
 ```bash
 npm install
 ```
 
-### Pasos para arrancar el proyecto:
+**Pasos para arrancar el proyecto:**
 
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
+Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez desees verlo desde tu computador** Para ello ejecuta el comando:
 
 ```bash
 npm start
@@ -41,28 +70,27 @@ npm start
 
 Este comando:
 
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
+- **Abre una ventana de tu navegador y muestra la página web**, al igual que hace el plugin de VS Code Live Server (Go live).
+- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en el navegador**.
 - También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
    - Convierte los ficheros SASS en CSS.
    - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
 
-Después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
+Si deseas editar mi evaluación después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
 
-### Pasos para publicar el proyecto en GitHub Pages:
-
-Para generar tu página para producción ejecuta el comando:
+**Para generar mi página para producción ejecute el comando:**
 
 ```bash
 npm run docs
 ```
-
 Y a continuación:
 
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
-1. Entra en la pestaña `settings` de tu repo.
+1. Subi a mi repositorio la carpeta `docs/` que se te acaba de generar.
+1. Entre en la pestaña `settings` de mi repositorio b.
 1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
-1. Y ya estaría!!!
+1. Y ya está
+
+Tal vez quieras cojer el código de esta evaluación entonces estas en libertad de hacer los mismos pasos que hice yo para tu repo. Recuerda que deberias copiarlo (descargarlo como un zip) y no clonarlo si es lo que deseas. 
 
 Además, los comandos:
 
@@ -77,48 +105,3 @@ npm run deploy
 
 son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
 
-## Flujo de archivos con Gulp
-
-Estas tareas de Gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
-
-## `gulpfile.js` y `config.json`
-
-Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
-
-De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
-
-## Estructura de carpetas
-
-La estructura de carpetas tiene esta pinta:
-
-```
-src
- ├─ api // los ficheros de esta carpeta se copian en public/api/
- |  └─ data.json
- ├─ images
- |  └─ logo.jpg
- ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
- |  ├─ main.js
- |  └─ events.js
- ├─ scss
- |  ├─ components
- |  ├─ core
- |  ├─ layout
- |  └─ pages
- └─ html
-    └─ partials
-```
-
-> **NOTA:** Los partials de HTML y SASS del proyecto son orientativos. Te recomendamos usar los que quieras, y borrar los que no uses.
-
-## Vídeotutoriales del Starter kit
-
-- [Qué es, trabajar con la versión de desarrollo y rutas relativas](https://www.youtube.com/watch?v=XwvhXvBijos)
-- [Migración de un proyecto, trabajar con la versión de producción y GitHub Pages](https://www.youtube.com/watch?v=qqGClcgt9Uc)
-- [Motor de plantillas](https://www.youtube.com/watch?v=4GwXOJ045Zg)
-
-## Falta algo?
-
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de las issues o si te animas a mejorarlo mándanos un PR :)

@@ -5,6 +5,7 @@ const seriesSection = document.querySelector('.js_series_section');
 const searchInput = document.querySelector('.js_search_input');
 const submit = document.querySelector('.js_button');
 const favouriteSection = document.querySelector('.js_favourite_section');
+const reset = document.querySelector('.js_reset');
 
 // *** Variables globales
 let dataShows = [];

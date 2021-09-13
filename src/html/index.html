@@ -8,66 +8,16 @@
     <link rel="icon" href="./assets/images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Roboto:ital,wght@0,700;1,400&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Lobster&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
 
   <body>
-      <!--  Ej. <include src="./partials/header.html" title="Bienvenidos a  -->
+    <include src="./partials/header.html" class="header" title="Buscador de series"></include>
+    
+    <include src="./partials/main.html"></include>
 
-      <header class="header">
-        <h1 class="header__title">Buscador de series</h1>
+    <script src="./assets/js/main.js"></script>
+  </body>
 
-        <form class="header__form">
-            <input type="text" name="search" id="search" class="js_search_input header__form--input" placeholder="Busca aquí tu serie">
-            <label for="search" class="header__form--label"></label>
-            <button type="submit" class="js_button header__form--btn">Buscar</button>
-        </form>
-
-      </header>
-
-      <main class="main">
-
-        <section class= "favourite">
-          <h2 class="favourite__title">Mis series favoritas</h2>
-          <div class="favourite__container">
-            <ul class="js_favourite_section">
-          <!-- ! Aqui empieza a dibuja js -->
-
-              <!-- <li class="favourite__li" >
-                <h3 class="favourite__name">Game of Thrones</h3>
-                <img src="./assets/images/img_prueba_GOT.jpg" alt="" class="favourite__img">
-                <span class="favourite__close">x</span>
-              </li>
-              <li class="favourite__li" >
-                <h3 class="favourite__name">Game of Thrones</h3>
-                <img src="./assets/images/img_prueba_GOT.jpg" alt="" class="favourite__img">
-                <span class="favourite__close">x</span>
-              </li> -->
-
-          <!-- ! Aqui termina de dibuja js -->
-            </ul>
-          </div>
-        </section>
-
-        <section class="js_series_section series">
-          <!-- ! Aqui empieza a dibuja js -->
-
-          <!-- <article class="js_series_card series__card ">
-            <img src="./assets/images/img_prueba_GOT.jpg" alt="" class="js_img_serie series__img">
-            <h3 class="js_name_serie series__title">Titulo de la serie</h3>
-          </article> 
-
-          <article class="js_series_card series__card id="otro">
-            <img src="./assets/images/img_prueba_DARK.jpg" alt="" class="js_img_serie series__img">
-            <h3 class="js_name_serie series__title">Dark</h3>
-          </article> -->
-
-          <!-- ! Aqui termina de dibuja js -->
-        </section>
-      </main>
-
-
-      <script src="./assets/js/main.js"></script>
-  <body>
 </html>

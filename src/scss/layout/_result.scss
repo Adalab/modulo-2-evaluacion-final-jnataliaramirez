@@ -1,7 +1,7 @@
 .series {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(100, rem(310));
+    max-height: rem(310);
     gap: rem(10);
     
 

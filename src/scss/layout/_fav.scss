@@ -1,11 +1,20 @@
 .favourite {
-    
+    text-align: center;
+
     &__title {
         text-align: center;
         font-family: $font-title;
         font-size: rem(20);
         font-weight: 600;
-        color: #E54F6D;
+        color: $color-principal;
+        letter-spacing: 0.1ch;
+    }
+
+    &__button {
+        margin-top: rem(20);
+        font-size: rem(13);
+        width: rem(50);
+        padding: rem(3);
     }
 
     &__container {
@@ -14,12 +23,24 @@
         margin-top: rem(15);
     }
 
+    &__ul {
+        display: grid;
+        grid-template-columns: repeat(2, rem(150));
+        margin : 0;
+        gap: 0;
+    }
+    
+
     &__li {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        margin: auto;
+        width: 60%;
         margin-bottom: rem(15);
+        border: rem(4) solid $color-background-fav;
+        padding: rem(5) rem(2);
     }
 
     &__name {
@@ -27,6 +48,7 @@
         color: $color-principal-alt;
         font-weight: 500;
         margin-bottom: rem(10);
+        font-size: 0.3em;
     }
 
     &__img {
@@ -41,7 +63,7 @@
         text-align: center;
         color: $white;
         background-color: $color-principal-alt;
-        font-size: rem(10);
+        font-size: rem(8);
         width: rem(15);
         height: rem(15);
         border-radius: 50%;

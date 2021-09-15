@@ -9,11 +9,14 @@ function renderSearch() {
         // * Variable que muestra el objeto de la info de la serie
         let dataImage = dataShow.image;
         let dataId = dataShow.id;
+        let newContentGenres; // * --> Entrevista
+   
 
         // * Crear elementos html a js
         const newArticleItemEl = document.createElement('article');
         const newImgItemEl = document.createElement('img');
         const newh3ItemEl = document.createElement('h3');
+        const newPItemEl = document.createElement('p') // * --> Entrevista
 
         // * Ejecuta isFavourite() para saber si el elemento esta en favoritos
         // * true or false
@@ -54,6 +57,13 @@ function renderSearch() {
         // * Añadir <img> y <h3> a <article>
         newArticleItemEl.appendChild(newImgItemEl);
         newArticleItemEl.appendChild(newh3ItemEl);
+
+        // * Añadir contenido: Genero de la serie --> Entrevista
+        for (const dataGenre of dataShow.genres) {
+            newContentGenres = document.createTextNode(`${dataGenre}`);
+            newPItemEl.appendChild(newContentGenres);
+            newArticleItemEl.appendChild(newPItemEl);
+        }
 
         // * Añadir <article> a <section> de la pág. HTML
         seriesSection.appendChild(newArticleItemEl);

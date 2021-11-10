@@ -8,6 +8,21 @@
         letter-spacing: 0.2ch;
     }
 
+    &__link {
+        text-decoration: none;
+        text-align     : center;
+        font-family    : $font-favourite;
+
+        &--by {
+            margin: rem(12);
+            color: $color-principal-alt;
+
+            &:hover {
+                color: $color-principal;
+            }
+        }
+    }
+
     &__form {
         margin    : rem(40);
         text-align: center;

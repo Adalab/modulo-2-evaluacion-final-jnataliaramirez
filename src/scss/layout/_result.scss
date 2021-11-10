@@ -13,6 +13,11 @@
         padding         : rem(15);
         font-size       : rem(15);
 
+        &:hover {
+            background-color: $color-background-fav ;
+
+        }
+
         &--fav {
             background-color: $color-background-fav;
 

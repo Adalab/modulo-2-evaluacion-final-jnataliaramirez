@@ -26,10 +26,8 @@
     }
 
     &__ul {
-        display              : grid;
-        grid-template-columns: repeat(2, rem(150));
-        margin               : 0;
-        gap                  : 0;
+        display              : flex;
+        flex-direction: column;
     }
 
 
@@ -43,6 +41,11 @@
         margin-bottom  : rem(15);
         border         : rem(4) solid $color-background-fav;
         padding        : rem(5) rem(2);
+
+        &:hover {
+        border         : rem(4) solid $color-principal;
+
+        }
     }
 
     &__name {
@@ -50,7 +53,7 @@
         color        : $color-principal-alt;
         font-weight  : 500;
         margin-bottom: rem(10);
-        font-size    : 0.3em;
+        font-size    : rem(16);
     }
 
     &__img {
@@ -65,7 +68,7 @@
         text-align         : center;
         color              : white;
         background-color   : $color-principal-alt;
-        font-size          : rem(8);
+        font-size          : rem(14);
         width              : rem(15);
         height             : rem(15);
         border-radius      : 50%;

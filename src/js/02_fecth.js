@@ -25,7 +25,7 @@ function handlerSearch(event) {
   let valueInput = searchInput.value;
 
   // *** Hacer petición al servidor - Fetch
-  fetch(`http://api.tvmaze.com/search/shows?q=${valueInput}`)
+  fetch(`https://api.tvmaze.com/search/shows?q=${valueInput}`)
     .then((response) => response.json())
     .then((data) => {
       // * Este arreglo esta vacio para cuando se vuelva hacer un fetch la ventana se vacie

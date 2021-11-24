@@ -1,22 +1,22 @@
 // *** Recoger input de la usuaria y hacer petición al servidor
 
-// // ** Hacer petición al fetch cuando cargue la pág.para traer los 1º resultados
+// ** Hacer petición al fetch cuando cargue la pág.para traer los 1º resultados
 
-// fetch(`https://api.tvmaze.com/shows?page=1`)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     // * Devuelve solo 18 elementos del array.
-//     let newData = data.slice(-18);
+fetch(`https://api.tvmaze.com/shows?page=1`)
+  .then((response) => response.json())
+  .then((data) => {
+    // * Devuelve solo 18 elementos del array.
+    let newData = data.slice(-18);
 
-//     // * Tomar la info de newData para añadir en un nuevo array dataShows
-//     const addDataShows = newData.map((aData) => dataShows.push(aData));
+    // * Tomar la info de newData para añadir en un nuevo array dataShows
+    const addDataShows = newData.map((aData) => dataShows.push(aData));
 
-//     // * Pintar en pantalla los datos recibidos por el servidor
-//     renderSearch();
+    // * Pintar en pantalla los datos recibidos por el servidor
+    renderSearch();
 
-//     // * Guardar los datos que ha dado el servidor en localStorage
-//     setInLocalStorage();
-//   });
+    // * Guardar los datos que ha dado el servidor en localStorage
+    setInLocalStorage();
+  });
 
 // **Petición cuando se solicite buscar una serie
 
